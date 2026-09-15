@@ -1,0 +1,50 @@
+{
+  "name": "run3d",
+  "version": "0.1.0",
+  "description": "Create a minimal Vite, React Three Fiber, and Drei Grid starter project",
+  "type": "module",
+  "bin": {
+    "run3d": "bin/run3d.js"
+  },
+  "files": [
+    "bin",
+    "template/gitignore",
+    "template/index.html",
+    "template/jsconfig.json",
+    "template/npmrc",
+    "template/package.json",
+    "template/pnpm-lock.yaml",
+    "template/src",
+    "template/vite.config.js"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "lint": "standard \"bin/**/*.js\" \"test/**/*.js\" \"template/src/**/*.{js,jsx}\" template/vite.config.js",
+    "lint:fix": "pnpm lint --fix",
+    "test": "node --test",
+    "pack:check": "npm pack --dry-run"
+  },
+  "keywords": [
+    "vite",
+    "react",
+    "three",
+    "react-three-fiber",
+    "drei",
+    "starter",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crapthings/run3d.git"
+  },
+  "homepage": "https://github.com/crapthings/run3d#readme",
+  "bugs": {
+    "url": "https://github.com/crapthings/run3d/issues"
+  },
+  "devDependencies": {
+    "standard": "^17.1.2"
+  }
+}
