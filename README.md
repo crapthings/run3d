@@ -3,9 +3,13 @@
 A simple 3D sandbox so you don't have to set up the same project every time.
 JavaScript, Vite, React Three Fiber, Drei, and Tailwind CSS — with a grid and a box to start with.
 
+Also includes [pmndrs/math](https://github.com/pmndrs/math) (`math`), [React Three Rapier](https://github.com/pmndrs/react-three-rapier) (`@react-three/rapier`), and [Floating UI for React](https://floating-ui.com/docs/react) (`@floating-ui/react`).
+
+React and React DOM are pinned to 19.2.8 to match React Three Fiber 9.7's supported range (`>=19 <19.3`). The template uses stable dependencies and a committed lockfile for reproducible installs.
+
 ## Usage
 
-Requires Node.js `^20.19.0 || >=22.12.0` and pnpm.
+Requires Node.js `^20.19.0 || >=22.12.0` and pnpm. Generated projects pin pnpm 12.4.1.
 
 ```bash
 npx @crapthings/run3d my-project
