@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Create a minimal Vite, React Three Fiber, and Drei Grid starter project",
   "type": "module",
   "bin": {
