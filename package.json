@@ -1,5 +1,8 @@
 {
-  "name": "run3d",
+  "name": "@crapthings/run3d",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.1.0",
   "description": "Create a minimal Vite, React Three Fiber, and Drei Grid starter project",
   "type": "module",

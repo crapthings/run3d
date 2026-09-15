@@ -8,7 +8,7 @@ JavaScript, Vite, React Three Fiber, Drei, and Tailwind CSS — with a grid and 
 Requires Node.js `^20.19.0 || >=22.12.0` and pnpm.
 
 ```bash
-npx run3d my-project
+npx @crapthings/run3d my-project
 cd my-project
 pnpm dev
 ```

@@ -13,7 +13,7 @@ const packageJson = JSON.parse(
 )
 
 function printUsage () {
-  console.log(`\nUsage: ${packageJson.name} <project-name> [--skip-install]\n\nOptions:\n  --skip-install  Create files without running pnpm install\n  -h, --help      Show this help message\n  -v, --version   Show the CLI version\n`)
+  console.log(`\nUsage: npx ${packageJson.name} <project-name> [--skip-install]\n\nOptions:\n  --skip-install  Create files without running pnpm install\n  -h, --help      Show this help message\n  -v, --version   Show the CLI version\n`)
 }
 
 function fail (message) {
