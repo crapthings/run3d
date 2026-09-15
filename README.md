@@ -14,3 +14,17 @@ pnpm dev
 ```
 
 Edit `src/Scene.jsx` and start building. Use `--skip-install` to skip dependency installation.
+
+## Publishing
+
+Log in once with `npm login`. From this repository, run:
+
+```bash
+pnpm release       # 0.1.1 → 0.1.2
+pnpm release minor # 0.1.1 → 0.2.0
+pnpm release major # 0.1.1 → 1.0.0
+```
+
+The command checks that the current branch includes the latest version on `origin`, checks npm login, runs lint, tests and a package dry run, bumps the version, commits **all current changes and unignored new files**, publishes to npm, then creates a version tag and pushes the commit and tag to the same branch on `origin`. Review `git status` first. npm may prompt for two-factor authentication.
+
+If a release fails, follow the recovery commands printed by the script. If npm publishing succeeded but Git pushing failed, only retry the Git steps. Running `pnpm release` again starts a new version.

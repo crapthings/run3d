@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create a minimal Vite, React Three Fiber, and Drei Grid starter project",
   "type": "module",
   "bin": {
@@ -24,10 +24,11 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "lint": "standard \"bin/**/*.js\" \"test/**/*.js\" \"template/src/**/*.{js,jsx}\" template/vite.config.js",
+    "lint": "standard \"bin/**/*.js\" \"scripts/**/*.js\" \"test/**/*.js\" \"template/src/**/*.{js,jsx}\" template/vite.config.js",
     "lint:fix": "pnpm lint --fix",
     "test": "node --test",
-    "pack:check": "npm pack --dry-run"
+    "pack:check": "npm pack --dry-run",
+    "release": "node scripts/release.js"
   },
   "keywords": [
     "vite",
