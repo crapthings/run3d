@@ -17,6 +17,8 @@
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.7.0",
     "@react-three/rapier": "^2.2.0",
+    "d3": "^7.9.0",
+    "fastnoise-lite": "^1.1.1",
     "math": "0.1.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
