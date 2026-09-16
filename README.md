@@ -1,6 +1,40 @@
 # run3d
 
-Start a 3D project in one command. run3d creates a Vite and React Three Fiber app with a scene, grid, and box ready to edit. It also includes Drei, Tailwind CSS, D3, FastNoiseLite, React Three Rapier, pmndrs/math, and Floating UI.
+Create a 3D project in one command. The starter scene has a grid and a box ready to edit.
+
+## Included tools
+
+### App foundation
+
+- Vite — runs the development server and builds the app.
+- React and React DOM — build and render the app UI.
+
+### 3D scenes
+
+- Three.js — renders 3D scenes.
+- pmndrs/math — provides math utilities for 3D work.
+- React Three Fiber — lets you build Three.js scenes with React.
+- Drei — provides ready-made 3D helpers and controls.
+
+### Worlds and movement
+
+- FastNoiseLite — generates procedural 2D and 3D noise.
+- Three Hex Tiling — reduces visible repetition in tiled textures.
+- Recast Navigation — generates navmeshes and finds paths.
+- `@recast-navigation/three` — connects Recast Navigation to Three.js scenes.
+- React Three Rapier — adds physics and collisions.
+
+### Data and state
+
+- D3 — provides data scales, layouts, and visualizations.
+- Zustand — manages React app state.
+- Koota — manages game state with entities and components.
+
+### Interface
+
+- React Router — connects URLs to pages and handles navigation.
+- Tailwind CSS — styles the app.
+- Floating UI — positions menus, tooltips, and popovers.
 
 ## Usage
 

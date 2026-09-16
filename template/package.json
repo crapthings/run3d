@@ -17,12 +17,18 @@
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.7.0",
     "@react-three/rapier": "^2.2.0",
+    "@recast-navigation/three": "^0.43.1",
     "d3": "^7.9.0",
     "fastnoise-lite": "^1.1.1",
+    "koota": "^0.6.6",
     "math": "0.1.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "three": "^0.186.0"
+    "react-router": "^7.18.3",
+    "recast-navigation": "^0.43.1",
+    "three": "^0.186.0",
+    "three-hex-tiling": "^0.1.5",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
