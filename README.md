@@ -44,6 +44,7 @@ Edit `src/Scene.jsx` to make it your own. To install dependencies later, add `--
 ### Data and state
 
 - D3 — provides data scales, layouts, and visualizations.
+- p5.js — creates interactive graphics and creative coding sketches.
 - Zustand — manages React app state.
 - Koota — manages game state with entities and components.
 

@@ -11,6 +11,7 @@
   },
   "files": [
     "bin",
+    "template/AGENTS.md",
     "template/gitignore",
     "template/index.html",
     "template/jsconfig.json",
