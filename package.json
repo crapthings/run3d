@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "From idea to interactive 3D prototype in one command. A JavaScript starter with Vite, React Three Fiber, and tools for creative experimentation.",
   "type": "module",
   "bin": {
