@@ -18,37 +18,37 @@ Edit `src/Scene.jsx` to make it your own. To install dependencies later, add `--
 
 ### App foundation
 
-- [Vite](https://github.com/vitejs/vite) — runs the development server and builds the app.
 - [React and React DOM](https://github.com/react/react) — build and render the app UI.
+- [Vite](https://github.com/vitejs/vite) — runs the development server and builds the app.
 
 ### 3D scenes
 
 - [Three.js](https://github.com/mrdoob/three.js) — renders 3D scenes.
-- [pmndrs/math](https://github.com/pmndrs/math) — provides math utilities for 3D work.
-- [Postprocessing](https://github.com/pmndrs/postprocessing) and [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing) — add visual effects with React components.
 - [React Three Fiber](https://github.com/pmndrs/react-three-fiber) — lets you build Three.js scenes with React.
 - [Drei](https://github.com/pmndrs/drei) — provides ready-made 3D helpers and controls.
 - [GSAP](https://github.com/greensock/GSAP) and [@gsap/react](https://github.com/greensock/react) — animate scene and UI properties with timelines and the `useGSAP` React hook.
+- [Postprocessing](https://github.com/pmndrs/postprocessing) and [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing) — add visual effects with React components.
+- [pmndrs/math](https://github.com/pmndrs/math) — provides math utilities for 3D work.
 - [R3F-Perf](https://github.com/utsuboco/r3f-perf) — monitors rendering performance while developing.
 
 ### Worlds and movement
 
-- [FastNoiseLite](https://github.com/Auburn/FastNoiseLite) — generates procedural 2D and 3D noise.
-- [Three Hex Tiling](https://github.com/Ameobea/three-hex-tiling) — reduces visible repetition in tiled textures.
+- [React Three Rapier](https://github.com/pmndrs/react-three-rapier) — adds physics and collisions.
 - [Recast Navigation and @recast-navigation/three](https://github.com/isaac-mason/recast-navigation-js) — generate navmeshes and find paths in Three.js scenes.
 - [Navcat](https://github.com/isaac-mason/navcat) — builds and queries navmeshes in pure JavaScript, with Three.js helpers.
-- [React Three Rapier](https://github.com/pmndrs/react-three-rapier) — adds physics and collisions.
+- [FastNoiseLite](https://github.com/Auburn/FastNoiseLite) — generates procedural 2D and 3D noise.
+- [Three Hex Tiling](https://github.com/Ameobea/three-hex-tiling) — reduces visible repetition in tiled textures.
 
 ### Data and state
 
-- [D3](https://github.com/d3/d3) — provides data scales, layouts, and visualizations.
-- [p5.js](https://github.com/processing/p5.js) — creates interactive graphics and creative coding sketches.
 - [Zustand](https://github.com/pmndrs/zustand) — manages React app state.
 - [Koota](https://github.com/pmndrs/koota) — manages game state with entities and components.
+- [D3](https://github.com/d3/d3) — provides data scales, layouts, and visualizations.
+- [p5.js](https://github.com/processing/p5.js) — creates interactive graphics and creative coding sketches.
 
 ### Interface
 
 - [React Router](https://github.com/remix-run/react-router) — connects URLs to pages and handles navigation.
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) — styles the app.
-- [Floating UI](https://github.com/floating-ui/floating-ui) — positions menus, tooltips, and popovers.
 - [Headless UI](https://github.com/tailwindlabs/headlessui) — provides accessible, unstyled React UI components.
+- [Floating UI](https://github.com/floating-ui/floating-ui) — positions menus, tooltips, and popovers.
