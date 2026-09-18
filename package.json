@@ -4,7 +4,7 @@
     "access": "public"
   },
   "version": "0.2.2",
-  "description": "Create a minimal Vite, React Three Fiber, and Drei Grid starter project",
+  "description": "From idea to interactive 3D prototype in one command. A JavaScript starter with Vite, React Three Fiber, and tools for creative experimentation.",
   "type": "module",
   "bin": {
     "run3d": "bin/run3d.js"
@@ -32,12 +32,21 @@
     "release": "node scripts/release.js"
   },
   "keywords": [
-    "vite",
-    "react",
+    "3d",
     "three",
+    "threejs",
+    "react",
     "react-three-fiber",
+    "r3f",
     "drei",
+    "vite",
+    "webgl",
+    "creative-coding",
+    "prototyping",
+    "javascript",
     "starter",
+    "template",
+    "scaffolding",
     "cli"
   ],
   "license": "MIT",
