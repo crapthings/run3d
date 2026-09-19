@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import { Canvas, extend, useFrame, useThree } from '@react-three/fiber'
 import { Grid, KeyboardControls, OrbitControls, Sky, SpotLight, useKeyboardControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
@@ -8,9 +8,12 @@ import { SunLight } from 'three/addons/lights/SunLight.js'
 extend({ SunLight })
 
 const SUN_POSITION = [30, 45, 20]
+const BOX_POSITION = [0, 0.7, 0]
 const MOVEMENT_SPEED = 3
 const MOVEMENT_RESPONSE = 12
 const TURN_RESPONSE = 12
+const MAX_FRAME_DELTA = 0.1
+const MOVEMENT_EPSILON_SQ = 0.0001
 const KEYBOARD_MAP = [
   { name: 'forward', keys: ['KeyW'] },
   { name: 'backward', keys: ['KeyS'] },
@@ -19,66 +22,72 @@ const KEYBOARD_MAP = [
 ]
 
 function Box () {
-  const box = useRef()
-  const controls = useRef()
-  const direction = useRef(new Vector3())
-  const displacement = useRef(new Vector3())
-  const forwardDirection = useRef(new Vector3())
-  const rightDirection = useRef(new Vector3())
-  const velocity = useRef(new Vector3())
-  const { camera } = useThree()
+  const boxRef = useRef(null)
+  const controlsRef = useRef(null)
+  const camera = useThree((state) => state.camera)
   const [, getKeys] = useKeyboardControls()
+  const { targetVelocity, velocity, displacement, cameraForward, cameraRight } = useMemo(() => ({
+    targetVelocity: new Vector3(),
+    velocity: new Vector3(),
+    displacement: new Vector3(),
+    cameraForward: new Vector3(),
+    cameraRight: new Vector3()
+  }), [])
 
   useFrame((_, delta) => {
-    if (!box.current || !controls.current) return
+    const box = boxRef.current
+    const controls = controlsRef.current
+    if (!box || !controls) return
 
     const { forward, backward, left, right } = getKeys()
     const inputForward = Number(forward) - Number(backward)
     const inputRight = Number(right) - Number(left)
-    const frameDelta = Math.min(delta, 0.1)
+    const frameDelta = Math.min(delta, MAX_FRAME_DELTA)
 
-    camera.getWorldDirection(forwardDirection.current)
-    forwardDirection.current.y = 0
-    forwardDirection.current.normalize()
-    rightDirection.current.crossVectors(forwardDirection.current, camera.up).normalize()
+    // Project camera-relative movement onto the ground plane.
+    camera.getWorldDirection(cameraForward)
+    cameraForward.y = 0
+    cameraForward.normalize()
+    cameraRight.crossVectors(cameraForward, camera.up).normalize()
 
-    direction.current
+    targetVelocity
       .set(0, 0, 0)
-      .addScaledVector(forwardDirection.current, inputForward)
-      .addScaledVector(rightDirection.current, inputRight)
+      .addScaledVector(cameraForward, inputForward)
+      .addScaledVector(cameraRight, inputRight)
 
-    if (direction.current.lengthSq() > 0) {
-      direction.current.normalize().multiplyScalar(MOVEMENT_SPEED)
-    }
+    targetVelocity.normalize().multiplyScalar(MOVEMENT_SPEED)
 
-    velocity.current.lerp(
-      direction.current,
+    velocity.lerp(
+      targetVelocity,
       1 - Math.exp(-MOVEMENT_RESPONSE * frameDelta)
     )
-    displacement.current.copy(velocity.current).multiplyScalar(frameDelta)
+    if (targetVelocity.lengthSq() === 0 && velocity.lengthSq() < MOVEMENT_EPSILON_SQ) {
+      velocity.set(0, 0, 0)
+    }
+    displacement.copy(velocity).multiplyScalar(frameDelta)
 
-    if (velocity.current.lengthSq() > 0.0001) {
+    if (velocity.lengthSq() > MOVEMENT_EPSILON_SQ) {
       // Local +Z is forward; wrap the angle to take the shortest turn.
-      const targetAngle = Math.atan2(velocity.current.x, velocity.current.z)
-      const angleDifference = targetAngle - box.current.rotation.y
+      const targetAngle = Math.atan2(velocity.x, velocity.z)
+      const angleDifference = targetAngle - box.rotation.y
       const shortestAngle = Math.atan2(Math.sin(angleDifference), Math.cos(angleDifference))
-      box.current.rotation.y += shortestAngle * (1 - Math.exp(-TURN_RESPONSE * frameDelta))
+      box.rotation.y += shortestAngle * (1 - Math.exp(-TURN_RESPONSE * frameDelta))
     }
 
-    box.current.position.add(displacement.current)
-    camera.position.add(displacement.current)
-    controls.current.target.copy(box.current.position)
-    controls.current.update()
+    // Translate camera and target together; Drei handles OrbitControls updates.
+    box.position.add(displacement)
+    camera.position.add(displacement)
+    controls.target.copy(box.position)
   })
 
   return (
     <>
-      <mesh ref={box} castShadow position-y={0.7}>
+      <mesh ref={boxRef} castShadow position={BOX_POSITION}>
         <boxGeometry args={[1.4, 1.4, 1.4]} />
         <meshStandardMaterial color='#38bdf8' metalness={0.15} roughness={0.35} />
       </mesh>
       <OrbitControls
-        ref={controls}
+        ref={controlsRef}
         dampingFactor={0.08}
         enableDamping
         enablePan={false}
@@ -86,7 +95,8 @@ function Box () {
         maxDistance={14}
         maxPolarAngle={Math.PI / 2 - 0.05}
         minDistance={4}
-        target={[0, 0.7, 0]}
+        minPolarAngle={0.05}
+        target={BOX_POSITION}
       />
     </>
   )
