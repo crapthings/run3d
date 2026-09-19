@@ -11,3 +11,7 @@
 ## Scene Lighting
 
 - Avoid ambient lighting by default. Only add ambient lighting (such as `AmbientLight` or `HemisphereLight`) when explicitly requested by the user.
+
+## Texture Maps
+
+- When using texture maps, process them with the installed `three-hex-tiling` package to reduce visible texture repetition instead of relying on basic repeating UV tiling alone.
