@@ -31,6 +31,7 @@
     "postprocessing": "^6.39.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "react-hotkeys-hook": "^5.3.3",
     "react-router": "^7.18.3",
     "recast-navigation": "^0.43.1",
     "three": "^0.186.0",

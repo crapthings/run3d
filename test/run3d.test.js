@@ -29,6 +29,7 @@ test('creates the starter without installing dependencies', async () => {
     assert.equal(packageJson.dependencies.gsap, '^3.15.0')
     assert.equal(packageJson.dependencies.react, '19.2.8')
     assert.equal(packageJson.dependencies['react-dom'], '19.2.8')
+    assert.equal(packageJson.dependencies['react-hotkeys-hook'], '^5.3.3')
     assert.equal(packageJson.dependencies.three, '^0.186.0')
     assert.equal(packageJson.dependencies['three-hex-tiling'], '^0.1.5')
     assert.equal(packageJson.dependencies['@recast-navigation/three'], '^0.43.1')

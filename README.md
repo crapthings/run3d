@@ -52,5 +52,6 @@ Edit `src/Scene.jsx` to make it your own. To install dependencies later, add `--
 
 - [React Router](https://github.com/remix-run/react-router) — connects URLs to pages and handles navigation.
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) — styles the app.
+- [React Hotkeys Hook](https://github.com/JohannesKlauss/react-hotkeys-hook) — adds declarative keyboard shortcuts with a React hook.
 - [Headless UI](https://github.com/tailwindlabs/headlessui) — provides accessible, unstyled React UI components.
 - [Floating UI](https://github.com/floating-ui/floating-ui) — positions menus, tooltips, and popovers.
