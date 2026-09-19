@@ -2,7 +2,7 @@
 
 ## Commands
 
-- Only run `pnpm build`, `pnpm lint`, or `pnpm test` when explicitly requested by the user.
+- Only run `pnpm build`, `pnpm lint`, or `pnpm test` when explicitly requested by the user, and never run `pnpm dev`.
 
 ## Code Style
 
