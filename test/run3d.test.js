@@ -48,7 +48,7 @@ test('creates the starter without installing dependencies', async () => {
     assert.equal((await stat(join(projectDirectory, '.gitignore'))).isFile(), true)
     assert.equal((await stat(join(projectDirectory, '.npmrc'))).isFile(), true)
     assert.equal((await stat(join(projectDirectory, 'src/App.jsx'))).isFile(), true)
-    assert.equal((await stat(join(projectDirectory, 'src/Scene.jsx'))).isFile(), true)
+    assert.equal((await stat(join(projectDirectory, 'src/Scenes/index.jsx'))).isFile(), true)
     assert.match(await readFile(join(projectDirectory, 'src/main.jsx'), 'utf8'), /import 'three-hex-tiling'/)
     await assert.rejects(stat(join(projectDirectory, 'src/scene')), { code: 'ENOENT' })
     const generatedFiles = await readdir(join(projectDirectory, 'src'), { recursive: true })

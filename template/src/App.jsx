@@ -1,4 +1,4 @@
-import { Scene } from '@/Scene'
+import { Scene } from '@/Scenes'
 
 export function App () {
   return (

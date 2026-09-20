@@ -14,7 +14,9 @@ cd my-project
 pnpm dev
 ```
 
-Edit `src/Scene.jsx` to make it your own. To install dependencies later, add `--skip-install` to the first command.
+Edit the components in `src/Scenes` to make the starter scene your own. To install dependencies later, add `--skip-install` to the first command.
+
+Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes/index.jsx` for the scene and its settings.
 
 ## Included tools
 
