@@ -1,42 +1,38 @@
-import { Canvas, extend } from '@react-three/fiber'
-import { Grid, OrbitControls, Sky } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
 import { Perf } from 'r3f-perf'
-import { SunLight } from 'three/addons/lights/SunLight.js'
 
-extend({ SunLight })
+// Face colors preserve the favicon's lime top, bright right side, and shaded left side.
+const cubeColors = ['#bef264', '#65a30d', '#a3e635', '#65a30d', '#65a30d', '#bef264']
 
-// One world unit represents one meter.
+// Three rounded streaks trail the cube in the initial camera's screen plane.
+function SpeedLines () {
+  return (
+    <group rotation-y={Math.atan2(4, 6)} position={[0, 0, 1.1]}>
+      {[0.32, 0, -0.32].map((height, index) => (
+        <mesh key={height} position={[-1.15 + index * 0.08, height, 0]} rotation-z={Math.PI / 2}>
+          <capsuleGeometry args={[0.055, 0.65 - index * 0.15, 4, 8]} />
+          <meshBasicMaterial color='#e2e8f0' />
+        </mesh>
+      ))}
+    </group>
+  )
+}
+
+// An orbitable cube and speed lines recreate the run3d favicon in three dimensions.
 export function Scene () {
   return (
-    <Canvas camera={{ position: [4, 3.4, 6], fov: 50, far: 100 }} dpr={1} shadows>
+    <Canvas orthographic camera={{ position: [4, 3.4, 6], zoom: 100, near: 0.1, far: 100 }} dpr={[1, 2]}>
+      <color attach='background' args={['#0f172a']} />
       {import.meta.env.DEV && <Perf position='top-right' />}
-      <sunLight
-        args={['#fff2e3', 2]}
-        position={[30, 45, 20]}
-        castShadow
-        shadow-camera-far={60}
-      />
-      <Sky distance={1000} rayleigh={1} sunPosition={[30, 45, 20]} turbidity={4} />
-      <mesh castShadow position-y={0.7}>
-        <boxGeometry args={[1.4, 1.4, 1.4]} />
-        <meshStandardMaterial color='#38bdf8' metalness={0.15} roughness={0.35} />
+      <mesh>
+        <boxGeometry args={[1.8, 1.8, 1.8]} />
+        {cubeColors.map((color, index) => (
+          <meshBasicMaterial key={index} attach={`material-${index}`} color={color} />
+        ))}
       </mesh>
-      <mesh receiveShadow rotation-x={-Math.PI / 2} position-y={-0.01}>
-        <planeGeometry args={[64, 64]} />
-        <shadowMaterial transparent opacity={0.25} depthWrite={false} />
-      </mesh>
-      <Grid
-        args={[64, 64]}
-        cellColor='#cbd5e1'
-        cellSize={1}
-        cellThickness={0.5}
-        fadeDistance={32}
-        infiniteGrid
-        sectionColor='#94a3b8'
-        sectionSize={2}
-        sectionThickness={0.8}
-      />
-      <OrbitControls makeDefault target={[0, 0.7, 0]} />
+      <SpeedLines />
+      <OrbitControls makeDefault target={[-0.25, 0, 0]} minZoom={50} maxZoom={200} />
     </Canvas>
   )
 }

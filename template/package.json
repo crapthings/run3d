@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@12.4.1",
+  "packageManager": "pnpm@12.8.1",
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=22.22.0"
   },
   "scripts": {
     "dev": "vite",
@@ -16,9 +16,9 @@
     "@floating-ui/react": "^0.27.20",
     "@gsap/react": "^2.1.2",
     "@headlessui/react": "^2.2.10",
-    "@react-three/drei": "^10.7.8",
-    "@react-three/fiber": "^9.7.0",
-    "@react-three/postprocessing": "^3.1.1",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/postprocessing": "^3.1.3",
     "@react-three/rapier": "^2.2.0",
     "@recast-navigation/three": "^0.43.1",
     "d3": "^7.9.0",
@@ -27,15 +27,16 @@
     "koota": "^0.6.6",
     "math": "0.1.0",
     "navcat": "^0.4.1",
-    "p5": "^2.3.3",
+    "p5": "^2.3.4",
     "postprocessing": "^6.39.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-hotkeys-hook": "^5.3.3",
-    "react-router": "^7.18.3",
+    "react-router": "^8.4.0",
     "recast-navigation": "^0.43.1",
-    "three": "^0.186.0",
+    "three": "^0.186.1",
     "three-hex-tiling": "^0.1.5",
+    "tsl-hex-tiling": "^0.1.1",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
@@ -43,6 +44,6 @@
     "@vitejs/plugin-react": "^6.1.1",
     "r3f-perf": "^7.2.3",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.0"
+    "vite": "^8.3.1"
   }
 }

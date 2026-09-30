@@ -1,12 +1,12 @@
 # run3d
 
-Create a 3D project in one command. The starter scene has a grid and a box ready to edit.
+Create a 3D project in one command. The starter scene recreates the run3d icon with a green cube and speed lines, ready to edit.
 
 As models like GPT-6 Astra grow more capable at building 3D experiences, the distance from an idea to a working prototype keeps shrinking. I have new ideas every day, and I want to spend that energy creating. run3d brings my go-to tools for brainstorming and experimentation into one ready-to-use starter, so I can jump straight into building, testing ideas, and discovering what works.
 
 ## Usage
 
-Requires Node.js `^20.19.0 || >=22.12.0` and pnpm.
+Requires Node.js `>=22.22.0` and pnpm.
 
 ```bash
 npx @crapthings/run3d my-project

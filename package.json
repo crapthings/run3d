@@ -18,11 +18,12 @@
     "template/npmrc",
     "template/package.json",
     "template/pnpm-lock.yaml",
+    "template/public",
     "template/src",
     "template/vite.config.js"
   ],
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=22.22.0"
   },
   "scripts": {
     "lint": "standard \"bin/**/*.js\" \"scripts/**/*.js\" \"test/**/*.js\" \"template/src/**/*.{js,jsx}\" template/vite.config.js",
