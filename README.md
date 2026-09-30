@@ -42,6 +42,7 @@ Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes
 - [Navcat](https://github.com/isaac-mason/navcat) — builds and queries navmeshes in pure JavaScript, with Three.js helpers.
 - [FastNoiseLite](https://github.com/Auburn/FastNoiseLite) — generates procedural 2D and 3D noise.
 - [Three Hex Tiling](https://github.com/Ameobea/three-hex-tiling) — reduces visible repetition in tiled textures.
+- [TSL Hex Tiling](https://github.com/crapthings/tsl-hex-tiling) — reduces texture repetition with Three.js TSL for WebGPU and WebGL 2.
 
 ### Data and state
 
