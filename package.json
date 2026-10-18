@@ -12,6 +12,7 @@
   "files": [
     "bin",
     "template/AGENTS.md",
+    "template/docs",
     "template/gitignore",
     "template/index.html",
     "template/jsconfig.json",
@@ -23,7 +24,7 @@
     "template/vite.config.js"
   ],
   "engines": {
-    "node": ">=22.22.0"
+    "node": ">=24"
   },
   "scripts": {
     "lint": "standard \"bin/**/*.js\" \"scripts/**/*.js\" \"test/**/*.js\" \"template/src/**/*.{js,jsx}\" template/vite.config.js",

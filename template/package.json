@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@12.8.1",
+  "packageManager": "pnpm@12.14.0",
   "engines": {
-    "node": ">=22.22.0"
+    "node": ">=24"
   },
   "scripts": {
     "dev": "vite",
@@ -17,8 +17,8 @@
     "@gsap/react": "^2.1.2",
     "@headlessui/react": "^2.2.10",
     "@react-three/drei": "^10.7.9",
-    "@react-three/fiber": "^9.8.1",
-    "@react-three/postprocessing": "^3.1.3",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.0",
     "@react-three/rapier": "^2.2.0",
     "@recast-navigation/three": "^0.43.1",
     "d3": "^7.9.0",
@@ -41,9 +41,9 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "@vitejs/plugin-react": "^6.1.1",
+    "@vitejs/plugin-react": "^6.1.2",
     "r3f-perf": "^7.2.3",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.1"
+    "vite": "^8.3.4"
   }
 }

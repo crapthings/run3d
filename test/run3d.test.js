@@ -21,9 +21,9 @@ test('creates the starter without installing dependencies', async () => {
     const packageJson = JSON.parse(await readFile(join(projectDirectory, 'package.json'), 'utf8'))
 
     assert.equal(packageJson.name, 'my-game')
-    assert.equal(packageJson.packageManager, 'pnpm@12.8.1')
-    assert.equal(packageJson.dependencies['@react-three/fiber'], '^9.8.1')
-    assert.equal(packageJson.dependencies['@react-three/postprocessing'], '^3.1.3')
+    assert.equal(packageJson.packageManager, 'pnpm@12.14.0')
+    assert.equal(packageJson.dependencies['@react-three/fiber'], '^9.8.2')
+    assert.equal(packageJson.dependencies['@react-three/postprocessing'], '^3.2.0')
     assert.equal(packageJson.dependencies.postprocessing, '^6.39.5')
     assert.equal(packageJson.dependencies.navcat, '^0.4.1')
     assert.equal(packageJson.dependencies.gsap, '^3.15.0')

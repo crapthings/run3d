@@ -6,7 +6,7 @@ As models like GPT-6 Astra grow more capable at building 3D experiences, the dis
 
 ## Usage
 
-Requires Node.js `>=22.22.0` and pnpm.
+Requires Node.js `>=24` and pnpm.
 
 ```bash
 npx @crapthings/run3d my-project
