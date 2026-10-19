@@ -51,6 +51,10 @@ Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes
 - [D3](https://github.com/d3/d3) — provides data scales, layouts, and visualizations.
 - [p5.js](https://github.com/processing/p5.js) — creates interactive graphics and creative coding sketches.
 
+### Media
+
+- [Mediabunny](https://mediabunny.dev/) — reads, writes, and converts audio and video files in the browser.
+
 ### Interface
 
 - [React Router](https://github.com/remix-run/react-router) — connects URLs to pages and handles navigation.
