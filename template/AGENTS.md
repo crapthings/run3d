@@ -1,5 +1,9 @@
 # Rules
 
+## World Scale
+
+- Use a consistent world scale of 1 unit = 1 meter for all scene geometry, object dimensions, and positions.
+
 ## Architectural Geometry
 
 - Use geometric unions or equivalent cleanup at wall intersections and floor/ceiling junctions to remove overlapping coplanar and internal faces, producing a closed shell that avoids Z-fighting; merging meshes alone is insufficient.
