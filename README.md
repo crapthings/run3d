@@ -53,6 +53,8 @@ Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes
 
 ### Media
 
+- [Elementary](https://github.com/elemaudio/elementary) — creates declarative audio DSP graphs with `@elemaudio/core` and runs them in the browser with `@elemaudio/web-renderer`.
+- [Howler.js](https://github.com/goldfire/howler.js#documentation) — plays audio with volume controls, sound sprites, and 3D spatial sound.
 - [Mediabunny](https://mediabunny.dev/) — reads, writes, and converts audio and video files in the browser.
 
 ### Interface
