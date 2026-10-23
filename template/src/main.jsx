@@ -7,7 +7,7 @@ import '@/styles.css'
 // Keep Tab available to game controls without moving focus outside editable fields.
 function preventTabFocus (event) {
   if (event.key !== 'Tab') return
-  if (!(event.target instanceof Element)) return
+  if (!(event.target instanceof window.Element)) return
   if (event.target.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"]), [role="textbox"]')) return
   event.preventDefault()
 }
