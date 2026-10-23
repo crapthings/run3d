@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus {
+    @apply outline-none ring-0;
+  }
+}
