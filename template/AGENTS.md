@@ -23,6 +23,7 @@
 - Avoid overengineering: question whether each solution or abstraction is needed for current requirements before implementing it.
 - Write component styles inline with Tailwind utilities in `className`, using arbitrary values when needed; use CSS files only for global setup or styles Tailwind cannot express.
 - Use Zustand for shared state and actions; avoid prop drilling.
+- Use react-i18next for UI translations; keep language resources in `src/locales` and initialize them in `src/i18n.js`.
 
 ## UI Components
 

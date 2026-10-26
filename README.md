@@ -18,7 +18,15 @@ Edit the components in `src/Scenes` to make the starter scene your own. To insta
 
 Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes/index.jsx` for the scene and its settings.
 
+## Languages
+
+The template initializes [react-i18next](https://react.i18next.com/latest) in `src/i18n.js`, with English and Chinese resources in `src/locales`. It detects the browser language, falls back to English, and remembers language changes in local storage. The document's `lang` attribute follows the active language.
+
+Use `const { t, i18n } = useTranslation()` from `react-i18next` in components, render text with `t('scene.label')`, and switch languages with `i18n.changeLanguage('zh')` or `i18n.changeLanguage('en')`. Add new translation keys to both JSON files; register additional languages in `src/i18n.js`.
+
 ## Included tools
+
+Ordered by importance to the starter and typical usage, with core tools first and specialized tools later.
 
 ### App foundation
 
@@ -35,6 +43,22 @@ Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes
 - [pmndrs/math](https://github.com/pmndrs/math) — provides math utilities for 3D work.
 - [R3F-Perf](https://github.com/utsuboco/r3f-perf) — monitors rendering performance while developing.
 
+### Data and state
+
+- [Zustand](https://github.com/pmndrs/zustand) — manages React app state.
+- [Koota](https://github.com/pmndrs/koota) — manages game state with entities and components.
+- [D3](https://github.com/d3/d3) — provides data scales, layouts, and visualizations.
+- [p5.js](https://github.com/processing/p5.js) — creates interactive graphics and creative coding sketches.
+
+### Interface
+
+- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) — styles the app.
+- [Headless UI](https://github.com/tailwindlabs/headlessui) — provides accessible, unstyled React UI components.
+- [React Router](https://github.com/remix-run/react-router) — connects URLs to pages and handles navigation.
+- [react-i18next](https://react.i18next.com/) and [i18next](https://www.i18next.com/) — translate UI text, with browser language detection and a saved language preference.
+- [React Hotkeys Hook](https://github.com/JohannesKlauss/react-hotkeys-hook) — adds declarative keyboard shortcuts with a React hook.
+- [Floating UI](https://github.com/floating-ui/floating-ui) — positions menus, tooltips, and popovers.
+
 ### Worlds and movement
 
 - [React Three Rapier](https://github.com/pmndrs/react-three-rapier) — adds physics and collisions.
@@ -44,23 +68,8 @@ Drag to orbit the scene, scroll to zoom, and right-drag to pan. Edit `src/Scenes
 - [Three Hex Tiling](https://github.com/Ameobea/three-hex-tiling) — reduces visible repetition in tiled textures.
 - [TSL Hex Tiling](https://github.com/crapthings/tsl-hex-tiling) — reduces texture repetition with Three.js TSL for WebGPU and WebGL 2.
 
-### Data and state
-
-- [Zustand](https://github.com/pmndrs/zustand) — manages React app state.
-- [Koota](https://github.com/pmndrs/koota) — manages game state with entities and components.
-- [D3](https://github.com/d3/d3) — provides data scales, layouts, and visualizations.
-- [p5.js](https://github.com/processing/p5.js) — creates interactive graphics and creative coding sketches.
-
 ### Media
 
-- [Elementary](https://github.com/elemaudio/elementary) — creates declarative audio DSP graphs with `@elemaudio/core` and runs them in the browser with `@elemaudio/web-renderer`.
 - [Howler.js](https://github.com/goldfire/howler.js#documentation) — plays audio with volume controls, sound sprites, and 3D spatial sound.
 - [Mediabunny](https://mediabunny.dev/) — reads, writes, and converts audio and video files in the browser.
-
-### Interface
-
-- [React Router](https://github.com/remix-run/react-router) — connects URLs to pages and handles navigation.
-- [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) — styles the app.
-- [React Hotkeys Hook](https://github.com/JohannesKlauss/react-hotkeys-hook) — adds declarative keyboard shortcuts with a React hook.
-- [Headless UI](https://github.com/tailwindlabs/headlessui) — provides accessible, unstyled React UI components.
-- [Floating UI](https://github.com/floating-ui/floating-ui) — positions menus, tooltips, and popovers.
+- [Elementary](https://github.com/elemaudio/elementary) — creates declarative audio DSP graphs with `@elemaudio/core` and runs them in the browser with `@elemaudio/web-renderer`.
