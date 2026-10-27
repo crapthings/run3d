@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.15.0",
   "engines": {
     "node": ">=24"
   },
@@ -20,7 +20,7 @@
     "@headlessui/react": "^2.2.10",
     "@react-three/drei": "^10.7.9",
     "@react-three/fiber": "^9.8.2",
-    "@react-three/postprocessing": "^3.2.0",
+    "@react-three/postprocessing": "^3.2.2",
     "@react-three/rapier": "^2.2.0",
     "@recast-navigation/three": "^0.43.1",
     "d3": "^7.9.0",
@@ -31,7 +31,7 @@
     "i18next-browser-languagedetector": "^8.2.3",
     "koota": "^0.6.6",
     "math": "0.1.0",
-    "mediabunny": "^1.61.6",
+    "mediabunny": "^1.62.1",
     "navcat": "^0.4.1",
     "p5": "^2.3.4",
     "postprocessing": "^6.39.5",
@@ -39,18 +39,18 @@
     "react-dom": "19.2.8",
     "react-hotkeys-hook": "^5.3.3",
     "react-i18next": "^17.1.9",
-    "react-router": "^8.4.0",
+    "react-router": "^8.5.0",
     "recast-navigation": "^0.43.1",
     "three": "^0.186.1",
     "three-hex-tiling": "^0.1.5",
     "tsl-hex-tiling": "^0.1.1",
-    "zustand": "^5.0.15"
+    "zustand": "^5.0.16"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "@vitejs/plugin-react": "^6.1.2",
     "r3f-perf": "^7.2.3",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.4"
+    "vite": "^8.3.5"
   }
 }
