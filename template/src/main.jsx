@@ -2,7 +2,7 @@ import 'three-hex-tiling'
 import '@/i18n'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from '@/App'
+import { App } from '@/app'
 import '@/styles.css'
 
 // Keep Tab available to game controls without moving focus outside editable fields.

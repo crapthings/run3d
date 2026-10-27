@@ -1,4 +1,4 @@
-import { Scene } from '@/Scenes'
+import { Scene } from '@/scenes'
 import { useTranslation } from 'react-i18next'
 
 // The starter scene fills the viewport against the favicon's dark background.
