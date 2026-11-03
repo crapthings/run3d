@@ -41,7 +41,7 @@ Ordered by importance to the starter and typical usage, with core tools first an
 - [GSAP](https://github.com/greensock/GSAP) and [@gsap/react](https://github.com/greensock/react) — animate scene and UI properties with timelines and the `useGSAP` React hook.
 - [Postprocessing](https://github.com/pmndrs/postprocessing) and [@react-three/postprocessing](https://github.com/pmndrs/react-postprocessing) — add visual effects with React components.
 - [pmndrs/math](https://github.com/pmndrs/math) — provides math utilities for 3D work.
-- [R3F-Perf](https://github.com/utsuboco/r3f-perf) — monitors rendering performance while developing.
+- [Drei StatsGl](https://github.com/pmndrs/drei#statsgl) — monitors rendering performance while developing.
 
 ### Data and state
 

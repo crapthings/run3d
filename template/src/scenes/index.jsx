@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
-import { Perf } from 'r3f-perf'
+import { OrbitControls, StatsGl } from '@react-three/drei'
 
 // Face colors preserve the favicon's lime top, bright right side, and shaded left side.
 const cubeColors = ['#bef264', '#65a30d', '#a3e635', '#65a30d', '#65a30d', '#bef264']
@@ -24,7 +23,9 @@ export function Scene () {
   return (
     <Canvas orthographic camera={{ position: [4, 3.4, 6], zoom: 100, near: 0.1, far: 100 }} dpr={[1, 2]}>
       <color attach='background' args={['#0f172a']} />
-      {import.meta.env.DEV && <Perf position='top-right' />}
+      {import.meta.env.DEV && (
+        <StatsGl trackGPU className='fixed top-0 right-0 z-20 flex [&>canvas:first-child]:hidden' />
+      )}
       <mesh>
         <boxGeometry args={[1.8, 1.8, 1.8]} />
         {cubeColors.map((color, index) => (

@@ -1,6 +1,8 @@
 # Headless UI
 
-Use the installed `@headlessui/react` package for accessible, unstyled React components. Style them with Tailwind CSS. Read the linked official documentation for component composition, keyboard behavior, and API details before implementing a matching interface.
+Prefer `@floating-ui/react` for overlays, especially dialogs, popovers, dropdown menus, and tooltips. Read its official [React guide](https://floating-ui.com/docs/react), [Dialog example](https://floating-ui.com/docs/dialog), and [FloatingFocusManager guide](https://floating-ui.com/docs/floatingfocusmanager) before implementation. Use its primitives for positioning, interactions, focus management, and dismissal.
+
+Use the installed `@headlessui/react` package when a ready-made accessible component better fits the interface, including dialogs, tabs, and form controls. The guide below applies when choosing Headless UI. Style components with Tailwind CSS and read the linked official documentation for component composition, keyboard behavior, and API details.
 
 ## Component guide
 

@@ -11,8 +11,9 @@
 
 ## UI Design and Components
 
-- Design self-explanatory interfaces: use clear labels and visual hierarchy instead of explanatory text; add help text only when necessary.
-- For menus, dialogs, popovers, tabs, and form controls, consult [docs/headless-ui.md](docs/headless-ui.md) and its official Headless UI links before implementation.
+- Keep HTML interface components in `src/ui`, rendered through the `Ui` portal into `#ui-root`. Add `pointer-events-auto` to interactive UI regions so empty overlay areas remain transparent to scene input.
+- Prefer `@floating-ui/react` for dialogs, popovers, menus, and tooltips; use its positioning, interaction, focus, and dismissal primitives. Follow the official docs and provide accessible titles, focus trapping and restoration, Escape dismissal, and backdrops for modal dialogs.
+- Use `@headlessui/react` when a ready-made component fits better, especially for tabs and form controls. See [docs/headless-ui.md](docs/headless-ui.md).
 
 ## Commands
 

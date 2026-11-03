@@ -19,6 +19,7 @@
     "template/npmrc",
     "template/package.json",
     "template/pnpm-lock.yaml",
+    "template/pnpm-workspace.yaml",
     "template/public",
     "template/src",
     "template/vite.config.js"
